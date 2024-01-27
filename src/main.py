@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from src import db.py
-import s
+import sqlite3
 
 app = FastAPI()
 
@@ -39,11 +39,7 @@ async def create_user(user: User):
     user_id = await database.add_user(user)
     return JSONResponse(content={"user_id": user_id}, status_code=200)
     connection = sqlite3.connect('my_database.db')
-cursor = connection.cursor()
-
-# Добавляем нового пользователя
-cursor.execute('INSERT INTO Users (username, email, age) VALUES (?, ?, ?)', ('newuser', 'newuser@example.com', 28))
-
-# Сохраняем изменения и закрываем соединение
-connection.commit()
-connection.close()
+    cursor = connection.cursor()
+    cursor.execute('INSERT INTO Users (username, email, age) VALUES (?, ?, ?)', ('newuser', 'newuser@example.com', 28))
+    connection.commit()
+    connection.close()
