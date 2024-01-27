@@ -3,18 +3,17 @@
   <head></head>
   <body>
     <p1>Начнем тестили посмотрим результаты</p1>
-     <input type="button" id="testButton"  value="Регистрация">
-      <input type="button" id="totalButton"  value="Вход">
+     <input type="button" id="testButton"  value="Пройти тест">
+      <input type="button" id="totalButton"  value="Посмотреть результаты">
       <script>var button_test = getElementById("testButton");
       function testButtonClick {
     window.location.href = 'localhost:8000/question1';;
       }
-      button_total.onclick = totalButtonClick;
-      <input type="button" id="logButton"  value="Вход">
-      var button_log = getElementById("logButton");
-      function logButtonClick {
-    window.location.href = 'localhost:8000/log';;
+      button_test.onclick = testButtonClick;
+      var button_total = getElementById("totalButton");
+      function totalButtonClick {
+    window.location.href = 'localhost:8000/result';;
     }
-      button_log.onclick = logButtonClick;</script>
+      button_total.onclick = totalButtonClick;</script>
   </body>
 </html>
