@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
-from src.db import Database, User
+from src import db.py
 
 app = FastAPI()
 
@@ -11,7 +11,7 @@ database = Database()
 
 
 @app.get("/")
-async def home():
+async def homepage():
     return FileResponse("static/html/index.html")
 
 
