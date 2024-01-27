@@ -1,5 +1,5 @@
-from typing import Union
-from pydantic import BaseModel
+#from typing import Union
+#from pydantic import BaseModel
 from time import sleep
 import sqlite3
 
