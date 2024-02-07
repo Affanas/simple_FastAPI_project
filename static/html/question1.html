@@ -4,10 +4,11 @@
   <body>
     <p1>Тест на знание литературных произведений</p1>
     <p1>За сколько дней Филеас Фогг объехал мир</p1>
-    <input type="radio" name="animal" id="testButton" value="cat"> Кошка
-    <input type="radio" name="animal" id="totalButton" value="dog"> Собака
+    <input type="radio" name="animal" id="testButton" value="80">
+    <input type="radio" name="animal" id="totalButton" value="81">
       <script>var button_test = getElementById("testButton");
       function testButtonClick {
+        result = result + 1
     window.location.href = 'localhost:8000/question2';;
       }
       button_test.onclick = testButtonClick;
